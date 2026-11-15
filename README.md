@@ -1,4 +1,4 @@
-# SuperEasy
+# SuperEasy · version 1
 
 Compara de forma sencilla los precios de los productos entre diferentes supermercados y planifica la compra a tu gusto.
 
