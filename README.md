@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# SuperEasy
+=======
 # SuperEasy · version 1
+>>>>>>> main
 
 Compara de forma sencilla los precios de los productos entre diferentes supermercados y planifica la compra a tu gusto.
 
@@ -21,3 +25,4 @@ npm run dev
 - src/data: datos de ejemplo
 - src/utils: funciones puras
 - docs: modelo de datos y componentes de cada pantalla
+
