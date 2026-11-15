@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import Inicio from './pages/Inicio.jsx'
 
-
-function App() {
-  
-
+export default function App() {
   return (
     <>
-      <h1>SuperEasy</h1>
+      <header className="cabecera">
+        <h1>SuperEasy</h1>
+      </header>
+      <main>
+        <Inicio />
+      </main>
     </>
   )
 }
-
-export default App
