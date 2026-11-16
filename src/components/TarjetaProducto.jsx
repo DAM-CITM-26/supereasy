@@ -3,7 +3,7 @@ import { euros, precioMinimo, precioPorUnidad, superMasBarato } from '../utils/l
 
 export default function TarjetaProducto({ producto }) {
   return (
-    <article className="card">
+    <article className="card" href={"#/producto/${producto.id}"}>
       <div className="card-cuerpo">
         <p className="card-meta">{producto.categoria}</p>
         <h3>{producto.nombre}</h3>
