@@ -13,3 +13,4 @@ function PantallaProductos({ estado }) {
         ${ListaProductos({ productos: ordenarProductos(filtrados, estado.orden), vacio: 'No hay productos con estos filtros.' })}
       </section>)
 }
+export default PantallaProductos

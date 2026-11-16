@@ -10,3 +10,4 @@ function TarjetaProducto({ producto }) {
         </div>
     </a>)
 }
+export default TarjetaProducto

@@ -10,4 +10,6 @@ function SelectorOrden({ valor }) {
       </label>
     )
   }
+
+  export default SelectorOrden
   
