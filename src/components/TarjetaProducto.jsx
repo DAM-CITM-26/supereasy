@@ -1,5 +1,5 @@
 import EtiquetaSuper from './EtiquetaSuper.jsx'
-import { euros, precioMinimo, precioPorUnidad, superMasBarato } from '../utils/productos.js'
+import { euros, precioMinimo, precioPorUnidad, superMasBarato } from '../utils/logica.js'
 
 export default function TarjetaProducto({ producto }) {
   return (
