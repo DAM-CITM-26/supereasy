@@ -10,10 +10,12 @@ import { PRODUCTOS } from '../data/productos.js'
 export default function Inicio() {
   return (
     <main>
-      <TarjetaProducto producto={PRODUCTOS[0]}>
+      {/*<TarjetaProducto producto={PRODUCTOS[0]}>
         <EtiquetaSuper nombre={SUPERMERCADOS[0]}></EtiquetaSuper>
         <Vacio icono={'🛒'} texto={'No hay productos disponibles'}></Vacio>
-      </TarjetaProducto>
+      </TarjetaProducto>*/}
+      
+      <ListaProductos productos={PRODUCTOS} vacio={'No hay productos disponibles'}></ListaProductos>
       
     </main>
   )
