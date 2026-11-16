@@ -3,7 +3,18 @@ import EtiquetaSuper from '../components/EtiquetaSuper.jsx'
 import ListaProductos from '../components/ListaProductos.jsx'
 import SelectorOrden from '../components/SelectorOrden.jsx'
 import TarjetaProducto from '../components/TarjetaProducto.jsx'
+import { SUPERMERCADOS } from '../data/supermercados.js'
+import Vacio from '../components/Vacio.jsx'
+import { PRODUCTOS } from '../data/productos.js'
 
 export default function Inicio() {
-  return <p>Aquí irá la pantalla principal.</p>
+  return (
+    <main>
+      <TarjetaProducto producto={PRODUCTOS[0]}>
+        <EtiquetaSuper nombre={SUPERMERCADOS[0]}></EtiquetaSuper>
+        <Vacio icono={'🛒'} texto={'No hay productos disponibles'}></Vacio>
+      </TarjetaProducto>
+      
+    </main>
+  )
 }
