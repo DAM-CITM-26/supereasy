@@ -1,4 +1,4 @@
-const SUPERMERCADOS = [
+export const SUPERMERCADOS = [
   "Mercadona",
   "Lidl",
   "Carrefour",

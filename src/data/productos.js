@@ -1,4 +1,4 @@
-const PRODUCTOS = [
+export const PRODUCTOS = [
   {"id": 1, "nombre": "Leche entera", "categoria": "Lácteos", "cantidad": 1, "unidad": "l", "precios": {"Mercadona": 0.95, "Lidl": 0.89, "Carrefour": 0.99, "Dia": 0.92}},
   {"id": 2, "nombre": "Arroz redondo", "categoria": "Despensa", "cantidad": 1, "unidad": "kg", "precios": {"Mercadona": 1.35, "Lidl": 1.29, "Carrefour": 1.45}},
   {"id": 3, "nombre": "Aceite de oliva virgen extra", "categoria": "Despensa", "cantidad": 1, "unidad": "l", "precios": {"Mercadona": 8.95, "Lidl": 8.49, "Carrefour": 9.2, "Dia": 8.75}},
