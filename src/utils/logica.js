@@ -1,21 +1,21 @@
 // El precio más bajo entre todos los supermercados que lo tienen
-function precioMinimo(producto) {
+export function precioMinimo(producto) {
     return Math.min(...Object.values(producto.precios))
 }
   
   // El nombre del supermercado más barato para ese producto
-function superMasBarato(producto) {
+export function superMasBarato(producto) {
     const minimo = precioMinimo(producto)
     return Object.keys(producto.precios).find((nombre) => producto.precios[nombre] === minimo)
 }
   
   // Precio por kg, por l o por unidad, con dos decimales
-function precioPorUnidad(producto) {
+export function precioPorUnidad(producto) {
     return Math.round((precioMinimo(producto) / producto.cantidad) * 100) / 100
 }
   
   // 'Todos' y 'Cualquiera' no filtran. maximo es un número de euros o 'Cualquiera'.
-function filtrarProductos(productos, { supermercado, maximo }) {
+export function filtrarProductos(productos, { supermercado, maximo }) {
     return productos.filter(
       (producto) =>
         (supermercado === 'Todos' || producto.precios[supermercado] !== undefined) &&
@@ -24,21 +24,21 @@ function filtrarProductos(productos, { supermercado, maximo }) {
 }
   
   // Devuelve una copia ordenada: 'barato', 'caro' o 'nombre'
-function ordenarProductos(productos, criterio) {
+export function ordenarProductos(productos, criterio) {
     const copia = [...productos]
     if (criterio === 'nombre') return copia.sort((a, b) => a.nombre.localeCompare(b.nombre))
     if (criterio === 'caro') return copia.sort((a, b) => precioMinimo(b) - precioMinimo(a))
     return copia.sort((a, b) => precioMinimo(a) - precioMinimo(b))
 }
   
-function buscarProductos(productos, texto) {
+export function buscarProductos(productos, texto) {
     const buscado = texto.trim().toLowerCase()
     if (buscado === '') return []
     return productos.filter((p) => p.nombre.toLowerCase().includes(buscado))
 }
   
   // Devuelve una cesta NUEVA con la cantidad cambiada (si llega a 0, se quita)
-function cambiarCantidad(cesta, productoId, cambio) {
+export function cambiarCantidad(cesta, productoId, cambio) {
     const linea = cesta.find((l) => l.productoId === productoId)
     const nueva = (linea ? linea.cantidad : 0) + cambio
     const sinLinea = cesta.filter((l) => l.productoId !== productoId)
@@ -47,7 +47,7 @@ function cambiarCantidad(cesta, productoId, cambio) {
 }
   
   // Total de la cesta en cada supermercado (solo los que tienen todos los productos)
-function totalesPorSuper(cesta, productos, supermercados) {
+export function totalesPorSuper(cesta, productos, supermercados) {
     const totales = {}
     for (const nombre of supermercados) {
       let total = 0
@@ -63,7 +63,7 @@ function totalesPorSuper(cesta, productos, supermercados) {
 }
   
   // 1.5 → '1,50 €'
-function euros(numero) {
+export function euros(numero) {
     return numero.toFixed(2).replace('.', ',') + ' €'
 }
   
