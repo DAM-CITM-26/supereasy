@@ -1,3 +1,8 @@
+// LÓGICA · funciones puras: reciben datos y devuelven datos (de js/logica.js de la referencia).
+// No tocan el estado ni la pantalla, y nunca modifican lo que reciben.
+// Solo las que usa la pantalla del Sprint 1. buscarProductos (Sprint 2),
+// cambiarCantidad y totalesPorSuper (Sprint 3) se añaden en su sprint.
+
 // El precio más bajo entre todos los supermercados que lo tienen
 export function precioMinimo(producto) {
     return Math.min(...Object.values(producto.precios))
