@@ -1,5 +1,3 @@
-function EtiquetaSuper({ nombre }) {
-    return (<span class="tag tag-rapida">Más barato en {nombre}</span>)
-    
+export default function EtiquetaSuper({ nombre }) {
+  return <span className="tag tag-rapida">Más barato en {nombre}</span>
 }
-export default EtiquetaSuper
