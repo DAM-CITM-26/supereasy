@@ -1,3 +1,10 @@
+import Chips from "./Chips.jsx"
+import ListaProductos from "./ListaProductos.jsx"
+import SelectorOrden from "./SelectorOrden.jsx"
+import { filtrarProductos, ordenarProductos } from '../utils/logica.js'
+import { PRODUCTOS } from "../data/productos.js"
+import { SUPERMERCADOS } from "../data/supermercados.js"
+
 function PantallaProductos({ estado }) {
     const filtrados = filtrarProductos(PRODUCTOS, estado)
     return (
