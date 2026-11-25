@@ -15,11 +15,11 @@ export default function Buscar() {
         id="busqueda-productos"
         className="buscador"
         type="search"
-        placeholder="Busca un producto"
+        placeholder="🔍 Busca un producto"
       />
 
       <Vacio
-        icono="A"
+        icono="🔍"
         texto="Escribe para buscar."
       />
 
