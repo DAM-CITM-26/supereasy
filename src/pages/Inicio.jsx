@@ -6,6 +6,8 @@ import { PRODUCTOS } from '../data/productos.js'
 import { SUPERMERCADOS } from '../data/supermercados.js'
 import { filtrarProductos, ordenarProductos } from '../utils/logica.js'
 
+import bannerInicio from '../assets/img.svg';
+
 const PRECIOS_MAXIMOS = ['Cualquiera', '1 €','2 €', '5 €']
 
 // Pantalla P1 · Productos (Sprint 1).
@@ -25,6 +27,11 @@ export default function Inicio() {
 
   return (
     <section className="seccion stack">
+      <img
+        className="banner"
+        src={bannerInicio}
+        alt="Banner de inicio"
+      />
       <SelectorOrden valor={orden} onCambio={setOrden} />
 
       <div className="field">
