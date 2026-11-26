@@ -1,9 +1,9 @@
-
 import { Routes, Route, Navigate, Link } from 'react-router-dom'
 
 import LayoutPrincipal from './components/LayoutPrincipal.jsx'
 import Inicio from './pages/Inicio.jsx'
 import Buscar from './pages/Buscar.jsx'
+import PantallaProducto from './pages/PantallaProducto.jsx'
 
 export default function App() {
   return (
@@ -38,6 +38,7 @@ export default function App() {
             </div>
           }
         />
+        <Route path="producto/:id" element={<PantallaProducto/>}/>
 
       </Route>
     </Routes>
