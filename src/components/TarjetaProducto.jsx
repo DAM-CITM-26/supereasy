@@ -6,7 +6,7 @@ export default function TarjetaProducto({ producto }) {
   return (
     <Link to={`/producto/${producto.id}`} className="card">
       <div className="card-cuerpo">
-        <p className="card-meta">{producto.categoria}</p>
+        <p className="card-meta">{/*producto.categoria*/}</p>
         <h3>{producto.nombre}</h3>
         <p>
           <b style={{ fontSize: '1.2rem' }}>{euros(precioMinimo(producto))}</b>{' '}

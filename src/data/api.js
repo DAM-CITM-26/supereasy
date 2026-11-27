@@ -13,17 +13,25 @@ export async function pedirProductos() {
   // 2.º await: el cuerpo llega después. json() devuelve otra
   //    promesa: await espera a tenerlo entero, ya como objeto
   const datos = await respuesta.json()
-  console.log('Total de registros recibidos:', datos.items.length)
-  console.log(
-    'Países recibidos:',
-    [...new Set(datos.items.map(registro =>
-        registro.location?.osm_address_country_code
-    ))]
-)
-console.log('Primer registro:', datos.items[0])
-  const registros = datos.items
+  
+  const registros = [...datos.items]
+  for (let pagina = 2; pagina <= datos.pages; pagina++) {
+    const respuestaPagina = await fetch(`${DIRECCION}&page=${pagina}`)
+
+    if (!respuestaPagina.ok) {
+      throw new Error(`Error al consultar la página ${pagina}`)
+    }
+
+    const datosPagina = await respuestaPagina.json()
+
+    registros.push(...datosPagina.items)
+  }
+  /*
+  console.log('Páginas consultadas:', datos.pages)
+  console.log('Total de registros recibidos:', registros.length)*/
+
   const productos = adaptarPrecios(registros)
-  console.log(productos)
+  /*console.log('Productos agrupados:', productos.length)*/
   
   // return: la promesa de pedirLista se cumple con el array de juegos
   return productos

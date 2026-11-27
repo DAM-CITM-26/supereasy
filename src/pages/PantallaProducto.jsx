@@ -52,7 +52,7 @@ export default function PantallaProducto() {
         <section className="seccion stack">
             <article className="stack">
                 <h2>{producto.nombre}</h2>
-                <p className="card-meta">{producto.categoria}</p>
+                <p className="card-meta">{/*producto.categoria*/}</p>
                 <table className="tabla"><thead><tr><th>Supermercado</th><th>Precio</th></tr></thead><tbody>{supermercadosOrdenados.map((nombre, i)=>(<tr key={nombre}><td>{i===0?'🏆':''}{nombre}</td><td>{euros(producto.precios[nombre])}</td></tr>))}</tbody></table>
 
                 {/*<div class="row">
