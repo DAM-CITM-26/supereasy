@@ -9,9 +9,15 @@ export function adaptarPrecios(registros){
         }
         
         const idProducto = registro.product_id
-        const nombreProducto = registro.product.product_name || `Producto ${registro.product.code}`
+        const nombreProducto = registro.product?.product_name || `Producto ${registro.product?.code || registro.product_id}`
         const supermercado =registro.location.osm_brand || registro.location.osm_name
         const precio = Number(registro.price)
+        /*console.log('Registro:', {
+            idProducto,
+            nombreProducto,
+            supermercado,
+            precio
+        })*/
 
         if (!Number.isFinite(precio) || precio <= 0) {
             return
